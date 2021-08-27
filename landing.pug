@@ -1,22 +1,3 @@
--var titulo = "Titulo principal"
--var titulos = ["Titulo Principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
--var usuario = "Angel"
-mixin caja(imagen,titulo,contenido)
-	.caja
-		.caja__imagen: img(src="./images/"+imagen, alt="Imagen vacia")
-		.caja__conatenido
-			h3=titulo
-			p=contenido
-doctype html
-html(lang="en")
-	include ./componentes/head.pug
-	body 
-		header 
-			h1 Platzi Games 
-			if usuario 
-				a Hola #{usuario}
-			else 
-				a.boton Registro
 		section.intro 
 			.intro__imagen: img(src="./images/imagen.png", alt="Imagen vacia") 
 			.intro__contenido 
