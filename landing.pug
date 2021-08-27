@@ -1,6 +1,12 @@
 -var titulo = "Titulo principal"
 -var titulos = ["Titulo Principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
 -var usuario = "Angel"
+mixin caja(imagen,titulo,contenido)
+	.caja
+		.caja__imagen: img(src="./images/"+imagen, alt="Imagen vacia")
+		.caja__conatenido
+			h3=titulo
+			p=contenido
 doctype html
 html(lang="en")
 	head
@@ -28,6 +34,7 @@ html(lang="en")
 					|minima aliquam neque praesentium iste sit
 					span asd;lkjfa;solijopqwieurfal;skdjf
 				a.boton Leer Mas
-		ul 
-			each titulo in titulos
-				li=titulo
+		main.contenido
+			+caja('imagen.png',titulos[1],'Lorem ipsum, dolor sit amet consectetur')
+			+caja('imagen.png',titulos[2],'Lorem ipsum, dolor sit amet consectetur')
+			+caja('imagen.png',titulos[3],'Lorem ipsum, dolor sit amet consectetur')
